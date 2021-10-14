@@ -1,0 +1,31 @@
+body {
+  background-color: #fbe7c6;
+}
+
+.container {
+  margin-top: 20%;
+  padding: 3rem 0;
+  width: 70%;
+  height: 100%;
+  /* display: inline-block; */
+  justify-content: center;
+  text-align: center;
+  border: 1px solid black;
+  background-color: #b4f8c8;
+}
+
+.input {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  .input {
+    width: 80%;
+  }
+}
