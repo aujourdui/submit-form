@@ -6,21 +6,21 @@ input.addEventListener("keyup", myFunction);
 
 function myFunction(event){
   if (event.keyCode === 13) {
-    event.preventDefault();
     btn.click();
   }
 };
 
 function buttonCode(){
+  lastMessage.style.display = 'block';
   if (input.value == 0) {
     lastMessage.innerHTML = "Please input any information";
+    lastMessage.style.color = 'red';
     dissapper();
-    lastMessage.style.display = 'block'
   }
   else {
     lastMessage.innerHTML = input.value;
+    lastMessage.style.color = 'black';
     input.value = "";
-    lastMessage.style.display = 'block'
   }
 };
 
@@ -29,17 +29,3 @@ function dissapper() {
   function hideElement() {
   lastMessage.style.display = 'none'
 }}
-
-/* <div x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 3000)"></div> */
-
-// lastMessage.innerHTML = "Alert: Last Message Delivered";
-
-// function buttonCode(){
-//   if (input.value == "") {
-//     lastMessage.innerHTML = input.value;
-//     input.value = "";
-//   }
-//   else {
-//     lastMessage.innerHTML = "Last Message Delivered";
-//   }
-// }
